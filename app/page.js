@@ -2,6 +2,8 @@ import Sketch from "./Component/Sketch";
 
 export default function Home() {
   return (
-    <Sketch />
+    <div className="h-screen">
+      <Sketch />
+    </div>
   );
 }

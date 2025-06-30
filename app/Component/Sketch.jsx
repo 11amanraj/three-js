@@ -5,9 +5,9 @@ import { Canvas } from '@react-three/fiber'
 
 const Sketch = () => {
   return (
-    <Canvas>
+    <Canvas className='bg-amber-400'>
         <mesh>
-            <boxGeometry args={[2, 2, 2]} />
+            <boxGeometry args={[3, 3, 3]} />
             <meshStandardMaterial />
         </mesh>
         <ambientLight intensity={0.1} />
