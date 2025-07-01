@@ -2,16 +2,18 @@
 
 import React, { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { Stats, OrbitControls } from '@react-three/drei'
 
 const Box = () => {
     const meshRef = useRef()
     
-    useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+    // useFrame((state, delta) => (meshRef.current.rotation.x += delta))
     
     return (
         <mesh ref={meshRef}>
             <boxGeometry args={[3, 3, 3]} />
-            <meshStandardMaterial />
+            <meshStandardMaterial side={2}/>
+            <OrbitControls />
         </mesh>
     )
 }
